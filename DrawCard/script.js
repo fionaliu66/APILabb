@@ -18,10 +18,10 @@ function drawCard() {
         //can save deck id to reuse
         let kCard = "cards";
         let kImgUrl = "image"
-        let $cardItem = $("<div>").addClass("card").css({"height":"176px","width":"126px"});
-        let $innerDiv = $("<img>").attr("src", data[kCard][0][kImgUrl]).attr("alt", "Image description").addClass("img-fluid");
+        let $cardItem = $("<div>").addClass("col");
+        let $innerDiv = $("<img>").attr("src", data[kCard][0][kImgUrl]).attr("alt", "Image description").css({"height":"176px","width":"126px"});
         $cardItem.append($innerDiv);
-        $(".cardView").append($cardItem);
+        $("#cardRow").append($cardItem);
     })
     .catch(err =>{console.log(err)});
   };
